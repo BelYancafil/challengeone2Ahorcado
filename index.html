@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Juego del ahorcado</title>
+    
+</head>
+
+<body>
+  <header>
+    <div class="contenedor">
+      <div class="header">
+        <img src="imagenes/Vector.svg">
+        
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="contenedor main">
+      <div id="menu" class="menu">
+        <form class="btns_menu">
+          <input id="start" class="btn btn-primary" type="button" value="Empezar Juego" />
+          <input id="add" class="btn btn-secondary" type="button" value="Agregar Palabra" />
+        </form>
+      </div>
+      <div id="juego" class="no-display">
+        <div class="state-nodisplay"></div>
+        <canvas class="ahorcado" width="355" height="354"></canvas>
+        <div class="correctas"></div>
+        <div class="incorrectas"></div>
+        <div class="teclado">
+          <div class="fila1"></div>
+          <div class="fila2"></div>
+          <div class="fila3"></div>
+        </div>
+        <form class="btns_juego">
+          <input id="new" class="btn btn-primary" type="button" value="Nuevo Juego" />
+          <input id="des" class="btn btn-secondary" type="button" value="Desistir" />
+        </form>
+      </div>
+      <div id="addWord" class="no-display">
+        <form class="addWord_form">
+          <textarea name="text_in_area" id="texto" placeholder="Ingrese una palabra aqui..." required></textarea>
+          <div class="info">
+            <img src="imagenes/icono_admiracion.png">
+            <p id="warning">Máx. 8 letras mayúsculas</p>
+          </div>
+          <div class="btns_addWord">
+            <input id="save" class="btn btn-primary" type="button" value="Guardar y empezar" />
+            <input id="cancel" class="btn btn-secondary" type="button" value="Cancelar" />
+          </div>
+          <dialog id="dialog" class="dialog">
+            <input type="button" value="x" />
+            <p>Solo se admiten letras mayúsculas sin acentos.</p>
+          </dialog>
+          <dialog id="dialog2" class="dialog">
+            <input type="button" value="x" />
+            <p>Maximo 8 letras </p>
+          </dialog>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <span>© <span id="year">2022</span> M.Belén Yancafil</span>
+    </div>
+  
+  </footer>
+  </footer>
+</body>
+<script src="js.js"></script>
+
+</html>

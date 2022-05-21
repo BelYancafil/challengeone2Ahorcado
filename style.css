@@ -1,0 +1,406 @@
+body{
+    height: 100%;
+    margin: 0px;
+    background-color:lightblue;
+    font-family: Inter, sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.main{
+    min-height: 80vh;
+}
+
+.header{
+    position: relative;
+}
+
+
+.gameOver-nodisplay, .youWin-nodisplay, .no-display{
+    display: none;
+}
+
+.juego{
+    padding-top: 50px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ahorcado{
+    width: 200px;
+}
+
+.correctas{
+    margin-top: 20px;
+    display: flex;
+    color: var(black);
+    font-size: 50px;
+}
+
+
+
+.teclado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.tecla{
+    font-family: Inter, sans-serif;
+    padding: 5px 20px;
+    background-color: var(black);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 0px var(black);
+    margin: 2px;
+    color: var(black);
+    transform: scale(1);
+    transition: transform 0.2s; 
+}
+
+
+.teclaUsadaCorrecta{
+    font-family: Inter, sans-serif;
+    padding: 5px 20px;
+    border: none;
+    background-color: blue;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 3px;
+    margin: 2px;
+    color: black; 
+}
+
+.teclaUsadaIncorrecta{
+    font-family: Inter, sans-serif;
+    padding: 5px 20px;
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 3px;
+    margin: 2px;
+    color: black; 
+}
+
+form{
+    display: flex;
+}
+
+.btn{
+    margin-top: 10px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    width: 332px;
+    font-size: 18px;
+    line-height: 19px;
+    border-radius: 20px;
+    border: 1px solid blue;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover{
+    transform: scale(1.0);
+}
+
+.btn-primary{
+    background-color:blue;
+    color: white;
+    
+
+}
+
+.btn-secondary{
+    background-color:var(white);
+    color: var(blue);
+}
+
+
+.btns_juego{
+    margin-top: 30px;
+}
+
+.btns_juego > .btn:first-child{
+    width: 300px;
+    margin-right: 12px;
+}
+
+.btns_juego > .btn:last-child{
+    width: 300px;
+    margin-left: 12px;
+}
+
+.menu{
+    height: 100%;
+}
+
+.btns_menu{
+    padding: 20% 20% 0 20%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btns_menu > .btn:first-child{
+    width: 300px;
+    height: 90px;
+    margin-bottom: 12px;
+}
+
+.btns_menu > .btn:last-child{
+    height: 60px;
+    width: 200px;
+    margin-top: 12px;
+}
+
+.addWord{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 15% 15% 0 15%;
+}
+.addWord_form{
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+
+
+.btns_addWord > .btn:first-child{
+    width: 300px;
+    margin-right: 12px;
+}
+
+.btns_addWord > .btn:last-child{
+    width: 300px;
+    margin-left: 12px;
+}
+
+#texto{
+    height: 200px;
+    width: 500px;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    line-height: 48px;
+    color: var(--color1);
+    background-color: transparent;
+    resize: none;
+    border: none;
+    text-transform: uppercase;
+}
+
+#texto:focus{
+    outline: none
+}
+
+#texto::-webkit-input-placeholder {
+    color: var(--color1);
+    text-transform: none;
+    opacity: 0.5;
+}
+
+.info{
+    font-family: Inter, sans-serif;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.info > p{
+    margin-left: 8px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(blue);
+}
+
+.info > svg{
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+
+@keyframes slide{
+    0%{
+        top:-800px;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes parpadeo{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.footer_hr {
+    max-width: 1400px;
+    margin: 5px auto 0;
+    border-radius: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: #7a7e81;
+    font-size: 16px;
+    
+}
+
+
+@media screen and (max-width: 700px) {
+    .correctas {
+        font-size: 40px;
+    }
+    .letraCorrecta {
+        height: 40px;
+        width: 30px;
+        padding: 5px 5px;
+    }
+    .teclado {
+        margin-top: 20px;
+    }
+    .btns_juego > .btn:last-child, .btns_juego > .btn:first-child{
+        width: 200px;
+    }
+    .btns_addWord > .btn:first-child, .btns_addWord > .btn:last-child {
+        width: 200px;
+    }
+    .addWord {
+        padding: 20% 15% 0 15%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .juego {
+        padding-top: 80px;
+    }
+    .ahorcado {
+        width: 200px;
+    }
+    .correctas {
+        font-size: 30px;
+    }
+    .letraCorrecta {
+        height: 30px;
+        width: 20px;
+        padding: 5px 5px;
+        margin: 0px 5px;
+    }
+    .tecla{
+        padding: 5px 10px;
+    }
+    .teclaUsadaIncorrecta {
+        padding: 5px 10px;
+    }
+    .teclaUsadaCorrecta {
+        padding: 5px 10px;
+    }
+    .btns_menu {
+        padding: 30% 20% 0 20%;
+    }
+    #texto {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .header> svg {
+        left: 40px;
+    }
+    @keyframes rotacion {
+        0%{
+            left:-40px;
+            opacity: 0;
+            transform: rotate(0deg);
+        }
+        100%{
+            left: 40px;
+            opacity: 1;
+            transform: rotate(360deg);
+        }
+    }
+    
+    .btns_menu {
+        padding: 40% 20% 0 20%;
+    }
+
+    .btns_juego > .btn:last-child, .btns_juego > .btn:first-child{
+        width: 120px;
+    }
+    #texto {
+        height: 180px;
+        width: 300px;
+    }
+    .addWord {
+        padding: 30% 15% 0 15%;
+    }
+}
+
+@media screen and (max-width: 465px) {
+   
+    .btns_addWord > .btn:first-child, .btns_addWord > .btn:last-child {
+        width: 150px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header> svg {
+        height: 35px;
+    }
+    .btns_menu > .btn:first-child {
+        width: 200px;
+        height: 70px;
+    }
+    .btns_menu > .btn:last-child {
+        width: 150px;
+        height: 50px;
+    }
+    .juego {
+        padding-top: 80px;
+    }
+    .ahorcado {
+        width: 150px;
+    }
+    .correctas {
+        font-size: 25px;
+    }
+    .letraCorrecta {
+        height: 25px;
+        width: 15px;
+        padding: 2px 2px;
+        margin: 0px 5px;
+    }
+    .tecla{
+        padding: 5px 5px;
+    }
+    .teclaUsadaIncorrecta {
+        padding: 5px 5px;
+    }
+    .teclaUsadaCorrecta {
+        padding: 5px 5px;
+    }
+    
+    
+}
